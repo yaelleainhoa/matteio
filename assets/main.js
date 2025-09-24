@@ -1,9 +1,9 @@
 // to launch locally
-// import { games } from "../../assets/variables.js";
+import { games } from "../../assets/variables.js";
 // to change for githubpages
 // import { games } from "/../../assets/variables.js";
 
-import { games } from "/regalosamsam/assets/variables.js";
+// import { games } from "/regalosamsam/assets/variables.js";
 
 
 function getCurrentPageIndex() {
@@ -16,16 +16,19 @@ function getCurrentPageIndex() {
 
 const currentGameIndex = getCurrentPageIndex();
 
-const prevGameIndex = (currentGameIndex - 1)%games.length;
+const prevGameIndex = (currentGameIndex - 1 + games.length) % games.length;
 const nextGameIndex = (currentGameIndex + 1)%games.length;
 
 
 function navigateToGame(index) {
-    if (index >= 0 && index < games.length) {
-        console.log(index);
-        const game = games[index][0];
-        window.location.href = `./${game}.html?gameIndex=${index}`;
+    const game = games[index][0];
+    if(index<0)
+    {
+        index=games.length-1;
+        game = games[index][0];
     }
+    console.log(index);
+    window.location.href = `./${game}.html?gameIndex=${index}`;
 }
 
 function setCommonHeader()
@@ -59,7 +62,7 @@ function setNavBar()
         navigateToGame(prevGameIndex);
     }
     var leftButtonImg = document.createElement("img");
-    leftButtonImg.src = "../../assets/img/left-arrow.png";
+    leftButtonImg.src = "../../assets/img/game"+prevGameIndex+".png";
     leftButtonImg.style.width = "40%";
     leftButtonImg.classList.add("navigationButton");
     leftButton.appendChild(leftButtonImg);
@@ -72,7 +75,7 @@ function setNavBar()
     }
     var homeButtonImg = document.createElement("img");
     homeButtonImg.src = "../../assets/img/home.png";
-    homeButtonImg.style.width = "20%";
+    homeButtonImg.style.width = "50%";
     homeButtonImg.classList.add("navigationButton");
     homeButton.appendChild(homeButtonImg);
     nav.appendChild(homeButton);
@@ -83,7 +86,7 @@ function setNavBar()
         navigateToGame(nextGameIndex)
     }
     var rightButtonImg = document.createElement("img");
-    rightButtonImg.src = "../../assets/img/right-arrow.png";
+    rightButtonImg.src = "../../assets/img/game"+nextGameIndex+".png";
     rightButtonImg.style.width = "40%";
     rightButtonImg.classList.add("navigationButton");
     rightButton.appendChild(rightButtonImg);
