@@ -1,5 +1,5 @@
 var images = [
-	"../../assets/img/opcolors/rules.png",
+	"../../assets/img/opcolors/rules.jpeg",
 	"../../assets/img/opcolors/q0.png",
 	"../../assets/img/opcolors/r0.png",
 	"../../assets/img/opcolors/q1.png",
@@ -12,7 +12,6 @@ var images = [
 	"../../assets/img/opcolors/r4.png",
 	"../../assets/img/opcolors/q5.png",
 	"../../assets/img/opcolors/r5.png",
-	"../../assets/img/end.png",
 ]
 
 var reponses = [

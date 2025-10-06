@@ -1,9 +1,9 @@
 // to launch locally
-import { games } from "../../assets/variables.js";
+// import { games } from "../../assets/variables.js";
 // to change for githubpages
 // import { games } from "/../../assets/variables.js";
 
-// import { games } from "/regalosamsam/assets/variables.js";
+import { games } from "/matteio/assets/variables.js";
 
 
 function getCurrentPageIndex() {
@@ -75,7 +75,7 @@ function setNavBar()
     }
     var homeButtonImg = document.createElement("img");
     homeButtonImg.src = "../../assets/img/home.png";
-    homeButtonImg.style.width = "50%";
+    homeButtonImg.style.width = "100%";
     homeButtonImg.classList.add("navigationButton");
     homeButton.appendChild(homeButtonImg);
     nav.appendChild(homeButton);

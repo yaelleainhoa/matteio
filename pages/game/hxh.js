@@ -1,5 +1,5 @@
 var images = [
-	"../../assets/img/hxh/rules.jpg",
+	"../../assets/img/hxh/rules.png",
 	"../../assets/img/hxh/q0.jpg",
 	"../../assets/img/hxh/r0.jpg",
 	"../../assets/img/hxh/q1.jpg",
@@ -20,7 +20,6 @@ var images = [
 	"../../assets/img/hxh/r9.jpg",
 	"../../assets/img/hxh/q10.jpg",
 	"../../assets/img/hxh/r10.jpg",
-	"../../assets/img/end.png",
 ]
 
 var reponses = [

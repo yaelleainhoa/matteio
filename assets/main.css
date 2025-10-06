@@ -14,6 +14,7 @@
 .navigationBar > button {
     background: none;
     border: none;
+    width: 200px;
 }
 
 .navigationButton{
